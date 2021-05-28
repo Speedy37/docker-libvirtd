@@ -29,6 +29,6 @@ RUN apk add --no-cache \
 
 COPY supervisord.conf /etc/supervisord.conf
 
-VOLUME ["/var/run/libvirt/"]
+VOLUME ["/var/run/libvirt/", "/var/lib/libvirt"]
 
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
