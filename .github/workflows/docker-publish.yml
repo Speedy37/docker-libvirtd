@@ -6,9 +6,9 @@ on:
     - cron: "30 2 * * 1"
 
   push:
-    # Publish `master` as Docker `latest` image.
+    # Publish `main` as Docker `latest` image.
     branches:
-      - master
+      - main
 
     # Publish `v1.2.3` tags as releases.
     tags:
@@ -18,7 +18,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: libvirt
+  IMAGE_NAME: libvirtd
 
 jobs:
   # Run tests.
