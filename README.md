@@ -8,7 +8,11 @@ _docker run_:
 
 ```sh
 mkdir run
-docker run --privileged -v $(pwd)/run:/var/run/libvirt ghcr.io/speedy37/docker-libvirtd/libvirtd:main
+mkdir var
+docker run --privileged \
+    -v $(pwd)/run:/var/run/libvirt \
+    -v $(pwd)/var:/var/lib/libvirt \
+    ghcr.io/speedy37/docker-libvirtd/libvirtd:main
 ```
 
 _libvirtd clients_ examples:
