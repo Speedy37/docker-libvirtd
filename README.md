@@ -1,6 +1,8 @@
-# docker-libvirt
+# docker-libvirtd
 
 Alpine Linux libvirt (qemu+kvm) docker image 
+
+GitHub action is setup so this image is __updated every week__.
 
 _docker run_:
 
